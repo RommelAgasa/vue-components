@@ -11,6 +11,7 @@
   <button @click="showPopup = true">Show Popup</button>
   <PopupComponent v-show="showPopup" @closePopup="closePopup"/>
 
+  <VModelCustomComponents />
 
 
 </template>
@@ -20,6 +21,7 @@
 import ArticleComponent from './components/Article.vue'
 // import ComponentC from './components/ComponentC.vue';
 import PopupComponent from './components/Popup.vue';
+import VModelCustomComponents from './components/VModelCustomComponents.vue';
 
 export default {
   name: 'App',
@@ -27,7 +29,8 @@ export default {
     // GreetUser,
     ArticleComponent,
     //ComponentC,
-    PopupComponent
+    PopupComponent,
+    VModelCustomComponents
   },
   data(){
     return {
