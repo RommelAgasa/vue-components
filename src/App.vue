@@ -13,6 +13,36 @@
 
   <VModelCustomComponents />
 
+  <!-- <CardSlot>Card Content</CardSlot>
+  <CardSlot>
+    <h2>Card Content</h2>
+  </CardSlot>
+  <CardSlot>
+    <img src="https://picsum.photos/200" alt="">
+  </CardSlot>
+  <CardSlot></CardSlot> -->
+
+  <CardSlot>
+    <template v-slot:header>
+      <h3>Header</h3>
+    </template>
+    <template v-slot:default>
+      <img src="https://picsum.photos/200" alt="">
+    </template>
+    <template v-slot:footer>
+      <button>View Details</button>
+    </template>
+  </CardSlot>
+
+
+
+  <SlotProps>
+    <template v-slot:default="slotProps">
+      <p>First Name: {{  slotProps.firstName }}</p>
+      <p>Last Name: {{  slotProps.lastName }}</p>
+    </template>
+  </SlotProps>
+
 
 </template>
 
@@ -22,6 +52,9 @@ import ArticleComponent from './components/Article.vue'
 // import ComponentC from './components/ComponentC.vue';
 import PopupComponent from './components/Popup.vue';
 import VModelCustomComponents from './components/VModelCustomComponents.vue';
+import CardSlot from './components/CardSlot.vue';
+import SlotProps from './components/SlotProps.vue';
+
 
 export default {
   name: 'App',
@@ -30,7 +63,9 @@ export default {
     ArticleComponent,
     //ComponentC,
     PopupComponent,
-    VModelCustomComponents
+    VModelCustomComponents,
+    CardSlot,
+    SlotProps
   },
   data(){
     return {
