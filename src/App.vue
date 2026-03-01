@@ -1,15 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!-- <GreetUser name="Kyla" />
+  <GreetUser name="Rommel" />
+  <GreetUser :name="name" /> -->
+
+  <ArticleComponent :title="'Article Title'" :likes="50" :isPublished="true"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// mport GreetUser from './components/Greet.vue'
+import ArticleComponent from './components/Article.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // GreetUser,
+    ArticleComponent
+  },
+  data(){
+    return {
+      name: 'John'
+    }
   }
 }
 </script>
