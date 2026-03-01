@@ -3,7 +3,7 @@
   <GreetUser name="Rommel" />
   <GreetUser :name="name" /> -->
 
-  <ArticleComponent :title="'Article Title'" :likes="50" :isPublished="true"/>
+  <ArticleComponent id="my-article" :title="'Article Title'" :likes="50" :isPublished="true"/>
 </template>
 
 <script>
